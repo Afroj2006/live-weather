@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Weather - Real-time Weather Updates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌤️ India Weather Dashboard</h1>
+            <p>Real-time weather updates for Indian cities</p>
+        </div>
+
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" class="search-input" id="cityInput" placeholder="Enter Indian city name (e.g., Mumbai, Delhi, Bangalore)">
+                <button class="search-btn" id="searchBtn">Get Weather</button>
+            </div>
+            <div class="popular-cities">
+                <span>Popular:</span>
+                <div class="city-tag" data-city="Mumbai">Mumbai</div>
+                <div class="city-tag" data-city="Delhi">Delhi</div>
+                <div class="city-tag" data-city="Bangalore">Bangalore</div>
+                <div class="city-tag" data-city="Chennai">Chennai</div>
+                <div class="city-tag" data-city="Kolkata">Kolkata</div>
+                <div class="city-tag" data-city="Hyderabad">Hyderabad</div>
+            </div>
+        </div>
+
+        <div class="loading" id="loading">Loading weather data</div>
+        <div class="error-message" id="error"></div>
+
+        <div class="weather-card" id="weatherCard">
+            <div class="weather-header">
+                <div class="city-info">
+                    <h2 id="cityName">-</h2>
+                    <p class="date" id="currentDate">-</p>
+                </div>
+                <div class="weather-icon" id="weatherIcon">☀️</div>
+            </div>
+
+            <div class="main-weather">
+                <div class="temperature-display">
+                    <div class="temp-value" id="temperature">--</div>
+                    <div class="temp-unit">°C</div>
+                </div>
+                <div class="weather-description">
+                    <div class="condition" id="condition">-</div>
+                    <div class="feels-like">Feels like <span id="feelsLike">--</span>°C</div>
+                </div>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail-card">
+                    <div class="detail-icon">💧</div>
+                    <div class="detail-label">Humidity</div>
+                    <div class="detail-value"><span id="humidity">--</span>%</div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">💨</div>
+                    <div class="detail-label">Wind Speed</div>
+                    <div class="detail-value"><span id="windSpeed">--</span> km/h</div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">🌡️</div>
+                    <div class="detail-label">Pressure</div>
+                    <div class="detail-value"><span id="pressure">--</span> hPa</div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">👁️</div>
+                    <div class="detail-label">Visibility</div>
+                    <div class="detail-value"><span id="visibility">--</span> km</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
